@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.vis.reader;
 
@@ -14,13 +14,13 @@ import java.util.Scanner;
  *
  */
 public class InputReader {
-	
+
 	private String fileName;
-	
+
 	public InputReader(String fileName) {
 		this.fileName=fileName;
 	}
-	
+
 	public List<String> readFile() {
 		FileReader fr = null;
 		try {
@@ -28,14 +28,12 @@ public class InputReader {
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
-		//BufferedReader br=new BufferedReader(fr);
-		Scanner sc=new Scanner(fr);
+		Scanner sc = new Scanner(fr);
 		List<String> lines = new ArrayList<>();
 		while (sc.hasNext()) {
 			lines.add(sc.nextLine());
 		}
 		return lines;
 	}
-	
-	
+
 }

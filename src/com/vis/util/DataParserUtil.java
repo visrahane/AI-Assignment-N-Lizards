@@ -23,7 +23,7 @@ public class DataParserUtil {
 		inputData.setGridLength(Integer.parseInt(inputDataList.get(1)));
 		inputData.setNoOfLizards(Integer.parseInt(inputDataList.get(2)));
 		int[][] inputMatrix = populateInputMatrix(inputDataList, inputData.getGridLength());
-		inputData.setInputMatrix(inputMatrix);
+		inputData.setGrid(inputMatrix);
 		return inputData;
 
 	}
@@ -33,7 +33,7 @@ public class DataParserUtil {
 		for (int k = 3, i = 0; k < matrixLength + 3; k++, i++) {
 			String line = inputDataList.get(k);
 			for (int j = 0; j < matrixLength; j++) {
-				inputMatrix[i][j] = line.charAt(j);
+				inputMatrix[i][j] = line.charAt(j) - 48;
 			}
 		}
 		return inputMatrix;
