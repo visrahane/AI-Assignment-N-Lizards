@@ -190,7 +190,7 @@ public class SAImpl implements AlgorithmService {
 			}
 		}
 		// go right
-		for (int k = j; k < grid.length; k++) {
+		for (int k = j + 1; k < grid.length; k++) {
 			if (grid[i][k] == GridConstants.TREE.getNumber()) {
 				break;
 			}
